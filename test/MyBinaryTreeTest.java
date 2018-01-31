@@ -23,4 +23,12 @@ public class MyBinaryTreeTest {
         tree.addLeftChild(tree.root, 31);
         assertEquals(31, tree.root.getLeftChild().getValue());
     }
+
+    @Test
+    void addRightChild() {
+        MyBinaryTree tree = new MyBinaryTree();
+        tree.setRoot(42);
+        tree.addRightChild(tree.root, 21);
+        assertEquals(21, tree.root.getRightChild().getValue());
+    }
 }
