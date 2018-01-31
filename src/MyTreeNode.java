@@ -1,17 +1,17 @@
-public class MyTreeNode {
-    private int value;
-    private MyTreeNode parent;
-    private MyTreeNode leftChild;
-    private MyTreeNode rightChild;
+public class MyTreeNode<E> {
+    private E value;
+    private MyTreeNode<E> parent;
+    private MyTreeNode<E> leftChild;
+    private MyTreeNode<E> rightChild;
 
-    public MyTreeNode(int value, MyTreeNode parent, MyTreeNode leftChild, MyTreeNode rightChild) {
+    public MyTreeNode(E value, MyTreeNode parent, MyTreeNode leftChild, MyTreeNode rightChild) {
         this.value = value;
         this.parent = parent;
         this.leftChild = leftChild;
         this.rightChild = rightChild;
     }
 
-    public int getValue() {
+    public E getValue() {
         return value;
     }
 
@@ -27,7 +27,7 @@ public class MyTreeNode {
         return rightChild;
     }
 
-    public void setValue(int value) {
+    public void setValue(E value) {
         this.value = value;
     }
 
