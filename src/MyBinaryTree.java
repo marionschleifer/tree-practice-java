@@ -18,4 +18,16 @@ public class MyBinaryTree<E> {
         return size == 0;
     }
 
+    protected MyTreeNode<E> createNode(E value, MyTreeNode<E> parent, MyTreeNode<E> leftChild, MyTreeNode<E> rightChild) {
+        return new MyTreeNode<E>(value, parent, leftChild, rightChild);
+    }
+
+    public MyTreeNode setRoot(E value) throws IllegalStateException {
+        if (!isEmpty()) {
+            throw new IllegalStateException("Tree isn't empty!");
+        }
+        root = createNode(value, null, null, null);
+        size = 1;
+        return root;
+    }
 }

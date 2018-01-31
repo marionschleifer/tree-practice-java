@@ -8,6 +8,7 @@ public class MyTreeNodeTest {
         assertEquals(42, node.getValue());
     }
 
+    @Test
     void setParent() {
         MyTreeNode node1 = new MyTreeNode(42, null, null, null);
         MyTreeNode node2 = new MyTreeNode(32, null, null, null);
