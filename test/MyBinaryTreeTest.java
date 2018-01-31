@@ -30,5 +30,6 @@ public class MyBinaryTreeTest {
         tree.setRoot(42);
         tree.addRightChild(tree.root, 21);
         assertEquals(21, tree.root.getRightChild().getValue());
+        assertEquals(2, tree.getSize());
     }
 }

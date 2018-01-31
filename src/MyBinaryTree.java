@@ -49,6 +49,7 @@ public class MyBinaryTree<E> {
         }
         MyTreeNode leftChild = createNode(value, node, null, null);
         node.setLeftChild(leftChild);
+        size++;
         return leftChild;
     }
 
@@ -59,6 +60,14 @@ public class MyBinaryTree<E> {
         }
         MyTreeNode rightChild = createNode(value, node, null, null);
         node.setRightChild(rightChild);
+        size++;
         return rightChild;
     }
+
+    public E set(MyTreeNode<E> node, E value) {
+        E tmp = node.getValue();
+        node.setValue(value);
+        return tmp;
+    }
+
 }
