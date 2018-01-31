@@ -30,4 +30,35 @@ public class MyBinaryTree<E> {
         size = 1;
         return root;
     }
+
+    public MyTreeNode<E> parent(MyTreeNode<E> node) {
+        return node.getParent();
+    }
+
+    public MyTreeNode<E> leftChild(MyTreeNode<E> node) {
+        return node.getLeftChild();
+    }
+
+    public MyTreeNode<E> rightChild(MyTreeNode<E> node) {
+        return node.getRightChild();
+    }
+
+    public MyTreeNode<E> addLeftChild(MyTreeNode<E> node, E value) throws IllegalArgumentException {
+        if (node.getLeftChild() != null) {
+            throw new IllegalArgumentException("This node already has a left child");
+        }
+        MyTreeNode leftChild = createNode(value, node, null, null);
+        node.setLeftChild(leftChild);
+        return leftChild;
+    }
+
+
+    public MyTreeNode<E> addRightChild(MyTreeNode node, E value) throws IllegalArgumentException {
+        if (node.getRightChild() != null) {
+            throw new IllegalArgumentException("This node already has a right child");
+        }
+        MyTreeNode rightChild = createNode(value, node, null, null);
+        node.setRightChild(rightChild);
+        return rightChild;
+    }
 }
